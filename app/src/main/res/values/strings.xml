@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LybraryProductivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_new_activity">Открыть</string>
+    <string name="edit_text_empty">Введите значение!</string>
+    <string name="pick_image">Выберите изображение</string>
+</resources>

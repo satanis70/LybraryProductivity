@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_module"
+    app:startDestination="@id/moduleFragment">
+
+    <fragment
+        android:id="@+id/moduleFragment"
+        android:name="com.example.test.ModuleFragment"
+        android:label="fragment_module"
+        tools:layout="@layout/fragment_module" >
+        <argument
+            android:name="text"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="context"
+            android:defaultValue=""
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>
