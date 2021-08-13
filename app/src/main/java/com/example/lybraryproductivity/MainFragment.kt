@@ -40,8 +40,7 @@ class MainFragment : Fragment() {
             if (editText?.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), R.string.edit_text_empty, Toast.LENGTH_LONG).show()
             } else {
-                val action = MainFragmentDirections.actionMainFragmentToModuleFragment2(editText?.text.toString(), requireActivity().localClassName)
-                navController.navigate(action)
+                ToastObj.newActivity(requireActivity(), editText?.text.toString())
             }
         }
 

@@ -1,5 +1,7 @@
 package com.example.test
 
+import android.content.Intent
+import android.content.Intent.getIntent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,14 +29,15 @@ class ModuleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         textView = view.findViewById(R.id.textView)
         navController = Navigation.findNavController(view)
-        textView?.text = args.text
+        val intent: Intent = requireActivity().intent
+        val data = intent.getStringExtra("text")
+        textView?.text = data
         ToastObj.getInfo("Open")
         Toast.makeText(requireContext(), ToastObj.toast(), Toast.LENGTH_LONG).show()
-
     }
 
-    override fun onDetach() {
-        super.onDetach()
+    override fun onPause() {
+        super.onPause()
         ToastObj.getInfo("Close")
     }
 

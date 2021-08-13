@@ -2,9 +2,7 @@ package com.example.test
 
 import android.app.Activity
 import android.content.Intent
-import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
-import androidx.core.content.ContextCompat.startActivity
 
 object ToastObj {
     var openText: String? = null
@@ -17,5 +15,9 @@ object ToastObj {
     fun pickImage(registerfor: ActivityResultLauncher<String>) {
         registerfor.launch("image/*")
     }
-
+    fun newActivity(activity: Activity, text: String){
+        val intent = Intent(activity, MainActivityModule::class.java)
+        intent.putExtra("text", text)
+        activity.startActivity(intent)
+    }
 }
